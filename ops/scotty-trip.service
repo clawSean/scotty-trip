@@ -1,0 +1,26 @@
+[Unit]
+Description=Scotty trip site and anonymous voting API
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+WorkingDirectory=/srv/apps/scotty-trip
+Environment=NODE_ENV=production
+Environment=PORT=3014
+Environment=DATA_FILE=/var/lib/scotty-trip/votes.json
+EnvironmentFile=-/etc/scotty-trip.env
+ExecStart=/usr/bin/node server.mjs
+Restart=always
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/scotty-trip
+
+[Install]
+WantedBy=multi-user.target
+
