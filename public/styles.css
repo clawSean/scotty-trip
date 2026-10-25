@@ -116,7 +116,7 @@ img { display: block; max-width: 100%; }
 .manifesto-stats div:last-child { border: 0; padding-left: 1rem; }
 .manifesto-stats strong { display: block; font-family: var(--display); font-size: 3rem; }
 .manifesto-stats span { font-size: .65rem; font-weight: 800; text-transform: uppercase; letter-spacing: .12em; }
-.ticker { display: flex; width: max-content; margin: 8rem -5vw 0; background: var(--acid); border-block: 1px solid var(--ink); transform: rotate(-1.5deg); }
+.ticker { display: flex; width: max-content; margin: 8rem -5vw 0; background: var(--acid); border-block: 1px solid var(--ink); transform: rotate(-1.5deg); transform-origin: left center; }
 .ticker div { flex: none; padding: 1rem 0; font-family: var(--display); font-size: clamp(1.3rem, 2.5vw, 2.3rem); letter-spacing: .04em; animation: ticker 26s linear infinite; }
 @keyframes ticker { to { transform: translateX(-100%); } }
 
