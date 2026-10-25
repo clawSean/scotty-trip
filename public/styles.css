@@ -92,10 +92,10 @@ img { display: block; max-width: 100%; }
 .round-link { width: 82px; height: 82px; border-radius: 50%; border: 1px solid rgba(255,255,255,.65); display: flex; flex-direction: column; align-items: center; justify-content: center; text-decoration: none; text-transform: uppercase; font-weight: 900; font-size: .62rem; letter-spacing: .12em; transition: .25s; }
 .round-link b { font-size: 1.3rem; }
 .round-link:hover { background: var(--acid); color: var(--night); border-color: var(--acid); transform: rotate(-8deg) scale(1.05); }
-.vote-jump { position: relative; width: 92px; height: 92px; padding: .6rem; border-color: var(--acid); background: var(--acid); color: var(--night); text-align: center; box-shadow: 0 10px 32px rgba(216,255,71,.2); }
-.vote-jump::after { content: ""; position: absolute; inset: -7px; border: 1px dashed rgba(216,255,71,.72); border-radius: 50%; transition: transform .35s ease; }
-.vote-jump:hover { transform: rotate(-6deg) scale(1.05); }
-.vote-jump:hover::after, .vote-jump:focus-visible::after { transform: rotate(28deg); }
+.explore-jump { position: relative; width: 92px; height: 92px; padding: .6rem; border-color: var(--acid); background: rgba(21,17,15,.32); color: var(--acid); text-align: center; box-shadow: inset 0 0 0 1px rgba(216,255,71,.14), 0 10px 32px rgba(0,0,0,.16); backdrop-filter: blur(6px); }
+.explore-jump::after { content: ""; position: absolute; inset: -7px; border: 1px solid rgba(216,255,71,.38); border-radius: 50%; transition: transform .35s ease, border-color .25s ease; }
+.explore-jump:hover { background: var(--acid); color: var(--night); transform: rotate(-6deg) scale(1.05); }
+.explore-jump:hover::after, .explore-jump:focus-visible::after { border-color: var(--acid); transform: rotate(28deg); }
 .countdown { position: absolute; z-index: 3; right: 5vw; bottom: 10%; display: flex; align-items: flex-end; gap: .6rem; color: #fff; text-transform: uppercase; }
 .countdown strong { order: 2; font-family: var(--display); font-size: clamp(5rem, 9vw, 9rem); line-height: .72; }
 .countdown span { order: 1; font-size: .62rem; font-weight: 800; letter-spacing: .12em; line-height: 1.35; text-align: right; }
@@ -344,7 +344,7 @@ dialog h2 { margin: .5rem 0 1.5rem; font-size: clamp(3rem, 9vw, 5rem); }
   .hero-title .outline { padding-left: 0; -webkit-text-stroke-width: 1.5px; }
   .hero-bottom { margin-left: 0; flex-direction: column; align-items: flex-start; gap: 1rem; }
   .round-link { width: 64px; height: 64px; }
-  .vote-jump { width: 76px; height: 76px; font-size: .56rem; }
+  .explore-jump { width: 76px; height: 76px; font-size: .56rem; }
   .countdown { right: 1.25rem; bottom: 8%; }
   .countdown strong { font-size: 5rem; }
   .photo-credit { left: 1.25rem; bottom: 1rem; max-width: 50%; }
