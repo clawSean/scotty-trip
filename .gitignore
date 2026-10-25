@@ -2,4 +2,12 @@ node_modules/
 data/
 .DS_Store
 *.log
-
+VISION.md
+STATUS.md
+LOG.md
+DECISIONS.md
+ROADMAP.md
+CONTRIBUTING.md
+RESOURCES.md
+resources/
+rollouts/

@@ -7,9 +7,18 @@ cd "$repo_root"
 npm run check
 npm test
 
-rsync -az --delete \
+rsync -az --delete --delete-excluded \
   --exclude .git \
   --exclude data \
+  --exclude VISION.md \
+  --exclude STATUS.md \
+  --exclude LOG.md \
+  --exclude DECISIONS.md \
+  --exclude ROADMAP.md \
+  --exclude CONTRIBUTING.md \
+  --exclude RESOURCES.md \
+  --exclude resources \
+  --exclude rollouts \
   --chmod=Du=rwx,Dgo=rx,Fu=rw,Fgo=r \
   ./ jpop-vps:/srv/apps/scotty-trip/
 
