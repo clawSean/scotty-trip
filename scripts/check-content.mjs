@@ -9,6 +9,7 @@ for (const required of ['noindex', 'nov. 19–22', 'desert behavior', 'the valle
 }
 assert.ok(js.includes('/api/vote'), 'Voting API is not wired into the client.');
 assert.ok(html.includes('href="/guide.html"'), 'Main navigation does not link to the field guide.');
+assert.ok(html.includes('class="round-link vote-jump" href="#vote"'), 'Hero CTA does not jump to voting.');
 for (const required of ['trail 100', 'the mission', 'social tap', 'package access is not a reservation']) {
   assert.ok(guide.toLowerCase().includes(required), `Field guide is missing required content: ${required}`);
 }
