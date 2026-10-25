@@ -292,17 +292,32 @@ footer button, footer a { color: inherit; background: none; border: 0; padding: 
 .guide-section-head { display: grid; grid-template-columns: 1fr minmax(280px, 460px); gap: 5vw; align-items: end; margin-bottom: 4rem; }
 .guide-section-head h2, .guide-finale h2 { margin: 0; font-family: var(--display); font-size: clamp(5rem, 10vw, 10rem); line-height: .78; letter-spacing: -.04em; }
 .guide-section-head > p { margin: 0; font-family: var(--serif); font-size: clamp(1.1rem, 1.8vw, 1.4rem); line-height: 1.5; }
+.nature-index { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 0 0 2.5rem; border: 1px solid rgba(22,17,15,.22); }
+.nature-index a { min-width: 0; display: grid; grid-template-columns: 36px minmax(0, 1fr) auto; gap: .8rem; align-items: center; padding: .85rem 1rem; color: var(--ink); text-decoration: none; border-bottom: 1px solid rgba(22,17,15,.16); }
+.nature-index a:nth-child(odd) { border-right: 1px solid rgba(22,17,15,.16); }
+.nature-index a:nth-last-child(-n+2) { border-bottom: 0; }
+.nature-index a:hover, .nature-index a:focus-visible { background: var(--acid); }
+.nature-index b { font-family: var(--display); font-size: 1.35rem; color: var(--sun); }
+.nature-index span { min-width: 0; font-family: var(--serif); font-size: 1rem; font-weight: 700; }
+.nature-index small { display: block; margin-top: .12rem; color: rgba(22,17,15,.58); font-family: var(--sans); font-size: .58rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+.nature-index strong { font-size: .58rem; letter-spacing: .08em; text-align: right; text-transform: uppercase; }
 .guide-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
-.guide-card { min-width: 0; overflow: hidden; background: var(--bone); border: 1px solid rgba(22,17,15,.18); }
+.guide-card { min-width: 0; overflow: hidden; scroll-margin-top: 138px; background: var(--bone); border: 1px solid rgba(22,17,15,.18); }
 .guide-card-image { display: block; aspect-ratio: 16 / 9; overflow: hidden; background: var(--night); }
 .guide-card-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .45s cubic-bezier(.2,.8,.2,1); }
 .guide-card-image:hover img, .guide-card-image:focus-visible img { transform: scale(1.045); }
 .guide-card-body { padding: clamp(1.35rem, 3vw, 2.4rem); }
 .guide-meta { margin: 0 0 .75rem; color: var(--sun); font-size: .62rem; font-weight: 900; letter-spacing: .14em; }
 .guide-card h3 { margin: 0 0 1rem; font-family: var(--serif); font-size: clamp(1.7rem, 3vw, 2.5rem); line-height: 1; }
+.guide-facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 0 0 1.2rem; border-block: 1px solid rgba(22,17,15,.14); }
+.guide-facts span { min-width: 0; padding: .7rem .6rem .7rem 0; color: rgba(22,17,15,.7); font-size: .72rem; line-height: 1.25; }
+.guide-facts span + span { padding-left: .6rem; border-left: 1px solid rgba(22,17,15,.14); }
+.guide-facts b { display: block; margin-bottom: .22rem; color: var(--ink); font-size: .55rem; letter-spacing: .12em; text-transform: uppercase; }
 .guide-card-body > p:not(.guide-meta) { min-height: 4.6em; margin: 0 0 1.5rem; color: rgba(22,17,15,.68); line-height: 1.55; }
 .guide-link { display: inline-flex; align-items: center; min-height: 44px; color: inherit; font-size: .72rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; text-underline-offset: .25rem; }
 .guide-actions { display: flex; flex-wrap: wrap; gap: 1.2rem; }
+.guide-photo-credit { display: block; margin-top: .85rem; color: rgba(22,17,15,.46); font-size: .6rem; }
+.guide-photo-credit a { color: inherit; }
 .guide-section-dark { color: var(--bone); background: var(--night); }
 .guide-section-dark .guide-card { color: var(--ink); }
 .guide-section-race { color: #fff; background: #2437b7; }
@@ -388,6 +403,9 @@ dialog h2 { margin: .5rem 0 1.5rem; font-size: clamp(3rem, 9vw, 5rem); }
   .guide-section-head, .guide-grid { grid-template-columns: 1fr; }
   .guide-section-head { gap: 2rem; margin-bottom: 2.5rem; }
   .guide-section-head h2, .guide-finale h2 { font-size: 18vw; }
+  .nature-index { grid-template-columns: 1fr; }
+  .nature-index a, .nature-index a:nth-child(odd), .nature-index a:nth-last-child(2) { border-right: 0; border-bottom: 1px solid rgba(22,17,15,.16); }
+  .nature-index a:last-child { border-bottom: 0; }
   .guide-card-body > p:not(.guide-meta) { min-height: 0; }
   .race-warning { flex-direction: column; gap: .35rem; }
 }
