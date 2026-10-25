@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "node server.mjs",
-    "check": "node --check server.mjs && node --check public/app.js && node scripts/check-content.mjs",
+    "check": "node --check server.mjs && node --check public/app.js && node --check public/guide.js && node scripts/check-content.mjs",
     "test": "node --test test/*.test.mjs",
     "smoke": "node scripts/smoke.mjs"
   },
@@ -13,4 +13,3 @@
     "node": ">=20"
   }
 }
-

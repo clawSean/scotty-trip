@@ -24,7 +24,9 @@ test('server exposes health and blocks traversal', async (t) => {
   const health = await fetch(`http://127.0.0.1:${port}/api/health`);
   assert.equal(health.status, 200);
   assert.deepEqual(await health.json(), { ok: true });
+  const guide = await fetch(`http://127.0.0.1:${port}/guide.html`);
+  assert.equal(guide.status, 200);
+  assert.match(await guide.text(), /Field Guide — Desert Behavior/);
   const traversal = await fetch(`http://127.0.0.1:${port}/..%2Fpackage.json`);
   assert.equal(traversal.status, 404);
 });
-
