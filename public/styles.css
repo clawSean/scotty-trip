@@ -283,7 +283,7 @@ footer button, footer a { color: inherit; background: none; border: 0; padding: 
 .guide-hero-copy h1 { margin: 0; font-family: var(--display); font-size: clamp(6rem, 15vw, 14rem); line-height: .72; letter-spacing: -.045em; }
 .guide-hero-copy h1 span { color: transparent; -webkit-text-stroke: 2px #fff; }
 .guide-hero-copy > p:last-child { max-width: 560px; margin: 2.5rem 0 0 10vw; font-family: var(--serif); font-size: clamp(1.2rem, 2vw, 1.7rem); font-style: italic; line-height: 1.35; }
-.guide-jumps { position: sticky; z-index: 40; top: 76px; display: grid; grid-template-columns: repeat(3, 1fr); background: var(--acid); border-block: 1px solid var(--ink); }
+.guide-jumps { position: sticky; z-index: 40; top: 76px; display: grid; grid-template-columns: repeat(5, 1fr); background: var(--acid); border-block: 1px solid var(--ink); }
 .guide-jumps a { display: flex; gap: .8rem; justify-content: center; padding: 1.15rem; color: var(--ink); font-size: .72rem; font-weight: 900; letter-spacing: .12em; text-decoration: none; text-transform: uppercase; border-right: 1px solid var(--ink); }
 .guide-jumps a:last-child { border-right: 0; }
 .guide-jumps a:hover, .guide-jumps a:focus-visible { background: var(--sun); color: #fff; }
@@ -302,7 +302,12 @@ footer button, footer a { color: inherit; background: none; border: 0; padding: 
 .nature-index small { display: block; margin-top: .12rem; color: rgba(22,17,15,.58); font-family: var(--sans); font-size: .58rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
 .nature-index strong { font-size: .58rem; letter-spacing: .08em; text-align: right; text-transform: uppercase; }
 .guide-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+.guide-grid-compact { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .guide-card { min-width: 0; overflow: hidden; scroll-margin-top: 138px; background: var(--bone); border: 1px solid rgba(22,17,15,.18); }
+.guide-card-compact { display: flex; }
+.guide-card-compact .guide-card-body { width: 100%; display: flex; flex-direction: column; }
+.guide-card-compact h3 { font-size: clamp(1.5rem, 2.4vw, 2.15rem); }
+.guide-card-compact .guide-actions, .guide-card-compact > .guide-card-body > .guide-link { margin-top: auto; }
 .guide-card-image { display: block; aspect-ratio: 16 / 9; overflow: hidden; background: var(--night); }
 .guide-card-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .45s cubic-bezier(.2,.8,.2,1); }
 .guide-card-image:hover img, .guide-card-image:focus-visible img { transform: scale(1.045); }
@@ -320,6 +325,10 @@ footer button, footer a { color: inherit; background: none; border: 0; padding: 
 .guide-photo-credit a { color: inherit; }
 .guide-section-dark { color: var(--bone); background: var(--night); }
 .guide-section-dark .guide-card { color: var(--ink); }
+.guide-section-sunset { color: var(--ink); background: #e8a163; }
+.guide-section-nightlife { color: var(--bone); background: #281b32; }
+.guide-section-nightlife .guide-card { color: var(--ink); }
+.guide-subhead { margin: clamp(3.5rem, 7vw, 6rem) 0 1.5rem; font-family: var(--display); font-size: clamp(2.6rem, 5vw, 5rem); letter-spacing: -.025em; text-transform: uppercase; }
 .guide-section-race { color: #fff; background: #2437b7; }
 .guide-section-race .guide-card { color: var(--ink); }
 .race-warning { display: flex; justify-content: space-between; gap: 2rem; margin: -1rem 0 2rem; padding: 1.1rem 1.4rem; color: var(--ink); background: var(--acid); border: 1px solid var(--ink); box-shadow: 8px 8px 0 var(--sun); }
@@ -398,8 +407,9 @@ dialog h2 { margin: .5rem 0 1.5rem; font-size: clamp(3rem, 9vw, 5rem); }
   .guide-hero-copy h1 { font-size: clamp(5.2rem, 26vw, 8rem); }
   .guide-hero-copy h1 span { -webkit-text-stroke-width: 1.5px; }
   .guide-hero-copy > p:last-child { margin-left: 0; }
-  .guide-jumps { top: 64px; }
-  .guide-jumps a { gap: .35rem; padding: .9rem .35rem; font-size: .6rem; letter-spacing: .06em; text-align: center; }
+  .guide-jumps { top: 64px; display: flex; overflow-x: auto; scrollbar-width: none; }
+  .guide-jumps::-webkit-scrollbar { display: none; }
+  .guide-jumps a { min-width: 118px; gap: .35rem; padding: .9rem .55rem; font-size: .6rem; letter-spacing: .06em; text-align: center; }
   .guide-section-head, .guide-grid { grid-template-columns: 1fr; }
   .guide-section-head { gap: 2rem; margin-bottom: 2.5rem; }
   .guide-section-head h2, .guide-finale h2 { font-size: 18vw; }
