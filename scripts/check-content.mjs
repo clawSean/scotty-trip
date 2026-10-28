@@ -10,7 +10,7 @@ for (const required of ['noindex', 'nov. 19–22', 'desert behavior', 'the valle
 assert.ok(js.includes('/api/vote'), 'Voting API is not wired into the client.');
 assert.ok(html.includes('href="/guide.html"'), 'Main navigation does not link to the field guide.');
 assert.ok(html.includes('class="round-link explore-jump" href="#itinerary"'), 'Hero CTA does not open the trip exploration flow.');
-for (const required of ['lookout mountain summit', 'dreamy draw nature trail', 'camelback via cholla', 'shaw butte trail 306', 'camelback via echo canyon', 'trail 100', 'route from resort', 'terrace room', 'granada park', 'the mission', 'richardson’s', 'buck &amp; rider', 'the beverly on main', 'platform 18', 'social tap', 'package access is not a reservation']) {
+for (const required of ['lookout mountain summit', 'dreamy draw nature trail', 'camelback via cholla', 'shaw butte trail 306', 'camelback via echo canyon', 'trail 100', 'route from resort', 'terrace room', 'granada park', 'thu · nov 19', '5:23 pm', 'sun · nov 22', '5:22 pm', 'the mission', 'richardson’s', 'buck &amp; rider', 'the beverly on main', 'platform 18', 'social tap', 'package access is not a reservation']) {
   assert.ok(guide.toLowerCase().includes(required), `Field guide is missing required content: ${required}`);
 }
 for (const forbidden of ['reservation number', 'pearson.jaredb@gmail.com', '6425 Reflection', 'the babies can’t read this anyway', 'the desert has been warned', 'countdown-label']) {

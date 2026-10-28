@@ -326,6 +326,13 @@ footer button, footer a { color: inherit; background: none; border: 0; padding: 
 .guide-section-dark { color: var(--bone); background: var(--night); }
 .guide-section-dark .guide-card { color: var(--ink); }
 .guide-section-sunset { color: var(--ink); background: #e8a163; }
+.sunset-clock { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: -1rem 0 2.5rem; background: rgba(255,250,237,.38); border: 1px solid rgba(22,17,15,.35); box-shadow: 8px 8px 0 rgba(185,47,37,.9); }
+.sunset-clock div { min-width: 0; padding: 1.15rem 1.25rem; border-right: 1px solid rgba(22,17,15,.25); }
+.sunset-clock div:nth-child(4) { border-right: 0; }
+.sunset-clock span { display: block; margin-bottom: .35rem; font-size: .58rem; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
+.sunset-clock strong { display: block; font-family: var(--display); font-size: clamp(1.8rem, 3.4vw, 3rem); line-height: .9; }
+.sunset-clock small { grid-column: 1 / -1; padding: .7rem 1.25rem; border-top: 1px solid rgba(22,17,15,.25); font-size: .62rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.sunset-clock a { color: inherit; text-underline-offset: .2rem; }
 .guide-section-nightlife { color: var(--bone); background: #281b32; }
 .guide-section-nightlife .guide-card { color: var(--ink); }
 .guide-subhead { margin: clamp(3.5rem, 7vw, 6rem) 0 1.5rem; font-family: var(--display); font-size: clamp(2.6rem, 5vw, 5rem); letter-spacing: -.025em; text-transform: uppercase; }
@@ -416,6 +423,10 @@ dialog h2 { margin: .5rem 0 1.5rem; font-size: clamp(3rem, 9vw, 5rem); }
   .nature-index { grid-template-columns: 1fr; }
   .nature-index a, .nature-index a:nth-child(odd), .nature-index a:nth-last-child(2) { border-right: 0; border-bottom: 1px solid rgba(22,17,15,.16); }
   .nature-index a:last-child { border-bottom: 0; }
+  .sunset-clock { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 0; }
+  .sunset-clock div { border-bottom: 1px solid rgba(22,17,15,.25); }
+  .sunset-clock div:nth-child(even) { border-right: 0; }
+  .sunset-clock div:nth-child(n+3) { border-bottom: 0; }
   .guide-card-body > p:not(.guide-meta) { min-height: 0; }
   .race-warning { flex-direction: column; gap: .35rem; }
 }
